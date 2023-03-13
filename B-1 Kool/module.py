@@ -11,11 +11,10 @@ def kool(opilased,puudumised):
         
         if valik == '1':
             # Получаем n лучших учеников
-            n = int(input('Sisestage parimate õpilaste arv: '))
-            top = sorted(zip(opilased, puudumised), key=lambda x: x[1])[:n]
-            print(f'Parimat {n} õpilased:')
-            for opilased, puudumised in top:
-                print(f'{opilased}: {puudumised} puudumised')
+            sorted_list = sorted(zip(opilased, puudumised), key=lambda x: x[1])       
+            for opilased, puudumised in sorted_list:
+                print(f'{opilased}' )
+
         elif valik == '2':
             # Сортируем список по прогулам и отображаем имена и прогулы
             sorted_list = sorted(zip(opilased, puudumised), key=lambda x: x[1])
